@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/cameraBtn"
-        android:layout_width="117dp"
-        android:layout_height="86dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="236dp"
-        android:layout_marginRight="236dp"
-        android:layout_marginBottom="35dp"
-        android:text="Camera" />
-
-    <Button
-        android:id="@+id/galleryBtn"
-        android:layout_width="125dp"
-        android:layout_height="86dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="57dp"
-        android:layout_marginRight="57dp"
-        android:layout_marginBottom="35dp"
-        android:text="Gallery" />
 
     <ImageView
         android:id="@+id/displayImageView"
         android:layout_width="match_parent"
-        android:layout_height="579dp"
+        android:layout_height="570dp"
         app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="VectorDrawableCompat" />
-</RelativeLayout>
+        tools:ignore="VectorDrawableCompat"
+        android:layout_weight="4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6">
+
+        <Button
+            android:id="@+id/cameraBtn"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/blue"
+            android:text="Open Camera" />
+
+        <Button
+            android:id="@+id/galleryBtn"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/purple"
+            android:text="Gallery" />
+    </RelativeLayout>
+</LinearLayout>
